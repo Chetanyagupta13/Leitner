@@ -10,10 +10,18 @@ class Leitner
         System.out.println("For how many boxes You want to Schedule the learning?");
         System.out.println("-------------------------------------------------------");
         int noOfBox = scan.nextInt();
+        while(noOfBox <= 0){
+            System.out.println("please enter greater then 0");
+            noOfBox = scan.nextInt();
+        }
         System.out.println("");
         System.out.println("Upto what numbers you want to learn?(max learn 999)");
         System.out.println("-------------------------------------------------------");
         int noOfCount = scan.nextInt();
+        while(noOfCount <= 0){
+            System.out.println("please enter greater then 0");
+            noOfCount = scan.nextInt();
+        }
         System.out.println("");
 
         LearnCount learnCount = new LearnCount(noOfBox, noOfCount);
